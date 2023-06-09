@@ -6,14 +6,14 @@ import Home from "./pages/home";
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#517360",
+            main: "#2c2c2c",
         },
         secondary: {
             main: "#538C51",
         },
     },
     typography: {
-        fontFamily: "Paytone One, Arial, sans-serif",
+        fontFamily: "monospace",
     },
 });
 
