@@ -18,18 +18,16 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import { links } from "../data/links";
 
-import logo from "../assets/logo.png";
+import logo from "/logo.png";
 
 const pages = ["Product", "AI", "Support"];
 
 const Navbar = () => {
     const navigate = useNavigate();
 
-    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-        null
-    );
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
 
@@ -37,7 +35,7 @@ const Navbar = () => {
         setAnchorElNav(null);
     };
 
-    const handleButtonClick = (pageURL: string) => {
+    const handleButtonClick = (pageURL) => {
         window.open(pageURL, "_blank");
     };
 

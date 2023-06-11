@@ -10,7 +10,7 @@ import Navbar from "../components/navbar";
 import Waste from "../data/waste";
 
 const AI = () => {
-    var trashType: any = 0;
+    var trashType = 0;
 
     const [cameraFacing, setCameraFacing] = useState("environment");
 

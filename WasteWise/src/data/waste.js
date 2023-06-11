@@ -1,9 +1,4 @@
-interface WasteType {
-    type: string;
-    color: string;
-}
-
-const Waste: WasteType[] = [
+const Waste = [
     {
         type: "None",
         color: "white",

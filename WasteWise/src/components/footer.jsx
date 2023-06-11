@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import { links } from "../data/links";
 
-import logo from "../assets/logo.png";
+import logo from "/logo.png";
 
 const Footer = () => {
     const handleButtonClick = (pageURL) => {

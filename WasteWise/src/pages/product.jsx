@@ -3,9 +3,9 @@ import { Canvas } from "@react-three/fiber";
 
 import Navbar from "../components/navbar";
 
-const Model = (props: any) => {
+const Model = () => {
     const { scene } = useGLTF("/wasteBin.glb", true);
-    return <primitive object={scene} {...props} />;
+    return <primitive scale={0.01} object={scene} />;
 };
 
 const Product = () => {
@@ -19,7 +19,7 @@ const Product = () => {
                 style={{ position: "absolute", height: "90%" }}>
                 <PresentationControls speed={1.5} global zoom={1}>
                     <Stage environment={undefined}>
-                        <Model scale={0.01} />
+                        <Model />
                     </Stage>
                 </PresentationControls>
             </Canvas>

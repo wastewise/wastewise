@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
-import product from "../assets/product.png";
+import product from "/product.png";
 
 const Home = () => {
     return (
