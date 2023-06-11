@@ -4,35 +4,38 @@ import {
     Button,
     Container,
     Grid,
+    Menu,
+    MenuItem,
     Toolbar,
     Typography,
 } from "@mui/material";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
+import { links } from "../data/links";
+
 import logo from "../assets/logo.png";
 
 const pages = ["Product", "AI", "Support"];
-const links = [
-    "https://www.instagram.com/",
-    "https://www.facebook.com/",
-    "https://www.gmail.com/",
-];
 
 const Navbar = () => {
-    // const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    //     null
-    // );
+    const navigate = useNavigate();
 
-    // const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    //     setAnchorElNav(event.currentTarget);
-    // };
+    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+        null
+    );
 
-    // const handleCloseNavMenu = () => {
-    //     setAnchorElNav(null);
-    // };
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
 
     const handleButtonClick = (pageURL: string) => {
         window.open(pageURL, "_blank");
@@ -43,11 +46,12 @@ const Navbar = () => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Grid container>
-                        <Grid item xs={12} md={5} p={2}>
+                        <Grid item xs={9} sm={5} md={5} p={2.5}>
                             <Box
-                                sx={{ height: "100%" }}
+                                sx={{ height: "100%", cursor: "pointer" }}
                                 display="flex"
                                 justifyContent="center"
+                                onClick={() => navigate("/wastewise")}
                                 alignItems="center">
                                 <Box
                                     component="img"
@@ -63,11 +67,11 @@ const Navbar = () => {
                                     display="flex"
                                     justifyContent="center"
                                     alignItems="center"
-                                    sx={{ minHeight: "100%" }}>
+                                    sx={{
+                                        minHeight: "100%",
+                                    }}>
                                     <Typography
                                         variant="h5"
-                                        component="a"
-                                        href="/"
                                         sx={{
                                             fontFamily: "monospace",
                                             fontWeight: 900,
@@ -81,57 +85,12 @@ const Navbar = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={0} md={3}>
-                            {/* <Box
-                                sx={{
-                                    flexGrow: 1,
-                                    display: { xs: "flex", md: "none" },
-                                }}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center">
-                                <IconButton
-                                    size="large"
-                                    aria-label="account of current user"
-                                    aria-controls="menu-appbar"
-                                    aria-haspopup="true"
-                                    onClick={handleOpenNavMenu}
-                                    color="inherit">
-                                    <MenuItem />
-                                </IconButton>
-                                <Menu
-                                    id="menu-appbar"
-                                    anchorEl={anchorElNav}
-                                    anchorOrigin={{
-                                        vertical: "bottom",
-                                        horizontal: "left",
-                                    }}
-                                    keepMounted
-                                    transformOrigin={{
-                                        vertical: "top",
-                                        horizontal: "left",
-                                    }}
-                                    open={Boolean(anchorElNav)}
-                                    onClose={handleCloseNavMenu}
-                                    sx={{
-                                        display: { xs: "block", md: "none" },
-                                    }}>
-                                    {pages.map((page) => (
-                                        <MenuItem
-                                            key={page}
-                                            onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center">
-                                                {page}
-                                            </Typography>
-                                        </MenuItem>
-                                    ))}
-                                </Menu>
-                            </Box> */}
-
+                        <Grid item xs={0} sm={0} md={3}>
                             <Box
                                 display="flex"
                                 justifyContent="center"
-                                alignItems="center">
+                                alignItems="center"
+                                sx={{ height: "100%" }}>
                                 <Box
                                     sx={{
                                         flexGrow: 1,
@@ -140,9 +99,14 @@ const Navbar = () => {
                                     {pages.map((page) => (
                                         <Button
                                             key={page}
+                                            onClick={() =>
+                                                navigate(
+                                                    "/wastewise/" +
+                                                        page.toLowerCase()
+                                                )
+                                            }
                                             // onClick={handleCloseNavMenu}
                                             sx={{
-                                                my: 2,
                                                 color: "white",
                                                 display: "block",
                                             }}>
@@ -164,7 +128,7 @@ const Navbar = () => {
                             </Box>
                         </Grid>
 
-                        <Grid item xs={0} md={4}>
+                        <Grid item xs={0} sm={5} md={4}>
                             <Box
                                 display="flex"
                                 justifyContent="center"
@@ -172,7 +136,7 @@ const Navbar = () => {
                                 sx={{
                                     minHeight: "100%",
                                     flexGrow: 1,
-                                    display: { xs: "none", md: "flex" },
+                                    display: { xs: "none", sm: "flex" },
                                 }}>
                                 <InstagramIcon
                                     onClick={() => handleButtonClick(links[0])}
@@ -201,7 +165,6 @@ const Navbar = () => {
                                         borderRadius: "20px",
                                     }}>
                                     <Typography
-                                        noWrap
                                         sx={{
                                             mx: 1,
                                             fontWeight: 800,
@@ -212,6 +175,88 @@ const Navbar = () => {
                                         CONCTACT
                                     </Typography>
                                 </Button>
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={1} sm={1} md={0} mx={2}>
+                            <Box
+                                sx={{
+                                    flexGrow: 1,
+                                    display: { xs: "flex", md: "none" },
+                                    height: "100%",
+                                }}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center">
+                                {/* <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    aria-haspopup="true"
+                                    onClick={handleOpenNavMenu}
+                                    color="inherit">
+                                    <MenuIcon />
+                                </IconButton> */}
+                                <Button
+                                    variant="text"
+                                    onClick={handleOpenNavMenu}>
+                                    <Box>
+                                        <Box
+                                            bgcolor="white"
+                                            height="3.5px"
+                                            width="35px"
+                                            borderRadius="20px"
+                                            mb={0.8}
+                                        />
+                                        <Box
+                                            bgcolor="white"
+                                            height="3.5px"
+                                            width="25px"
+                                            ml="10px"
+                                            borderRadius="20px"
+                                            mb={0.8}
+                                        />
+                                        <Box
+                                            bgcolor="white"
+                                            height="3.5px"
+                                            width="15px"
+                                            ml="20px"
+                                            borderRadius="20px"
+                                        />
+                                    </Box>
+                                </Button>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={anchorElNav}
+                                    anchorOrigin={{
+                                        vertical: "bottom",
+                                        horizontal: "left",
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: "top",
+                                        horizontal: "left",
+                                    }}
+                                    open={Boolean(anchorElNav)}
+                                    onClose={handleCloseNavMenu}
+                                    sx={{
+                                        display: { xs: "block", md: "none" },
+                                    }}>
+                                    {pages.map((page) => (
+                                        <MenuItem
+                                            key={page}
+                                            onClick={() =>
+                                                navigate(
+                                                    "/wastewise/" +
+                                                        page.toLowerCase()
+                                                )
+                                            }>
+                                            <Typography textAlign="center">
+                                                {page}
+                                            </Typography>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
                             </Box>
                         </Grid>
                     </Grid>

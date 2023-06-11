@@ -4,17 +4,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
+import { links } from "../data/links";
+
 import logo from "../assets/logo.png";
 
-const links = [
-    "https://www.instagram.com/",
-    "https://www.facebook.com/",
-    "https://www.gmail.com/",
-    "",
-];
-
 const Footer = () => {
-    const handleButtonClick = (pageURL: string) => {
+    const handleButtonClick = (pageURL) => {
         window.open(pageURL, "_blank");
     };
 
@@ -34,7 +29,7 @@ const Footer = () => {
                         src={logo}
                         color="white"
                         sx={{
-                            height: "50px",
+                            height: "45px",
                         }}
                         mr={2}
                     />
@@ -73,18 +68,21 @@ const Footer = () => {
                         sx={{
                             ml: 2,
                             cursor: "pointer",
+                            color: "white",
                         }}></InstagramIcon>
                     <FacebookIcon
                         onClick={() => handleButtonClick(links[1])}
                         sx={{
                             ml: 2,
                             cursor: "pointer",
+                            color: "white",
                         }}></FacebookIcon>
                     <EmailIcon
                         onClick={() => handleButtonClick(links[2])}
                         sx={{
                             ml: 2,
                             cursor: "pointer",
+                            color: "white",
                         }}></EmailIcon>
                     <Button
                         variant="contained"
