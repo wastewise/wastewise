@@ -84,7 +84,7 @@ const AI = () => {
                 </Typography>
             </Box>
 
-            <Footer />
+            <Footer bgcolor="primary.main" />
         </>
     );
 };

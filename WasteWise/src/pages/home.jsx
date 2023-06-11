@@ -66,6 +66,7 @@ const Home = () => {
                             alt="product"
                             src={product}
                             sx={{
+                                borderRadius: "40px",
                                 height: "100%",
                                 width: "100%",
                             }}
@@ -217,7 +218,7 @@ const Home = () => {
                     </Box>
                 </Box>
 
-                <Footer />
+                <Footer bgcolor="primary.main" />
             </Box>
         </>
     );

@@ -1,6 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
 
-import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -8,14 +7,14 @@ import { links } from "../data/links";
 
 import logo from "/logo.png";
 
-const Footer = () => {
+const Footer = (props) => {
     const handleButtonClick = (pageURL) => {
         window.open(pageURL, "_blank");
     };
 
     return (
         <Box
-            bgcolor="primary.main"
+            {...props}
             sx={{ height: "100%", width: "100%" }}
             display="flex"
             justifyContent="center"
@@ -77,13 +76,13 @@ const Footer = () => {
                             cursor: "pointer",
                             color: "white",
                         }}></FacebookIcon>
-                    <EmailIcon
+                    {/* <EmailIcon
                         onClick={() => handleButtonClick(links[2])}
                         sx={{
                             ml: 2,
                             cursor: "pointer",
                             color: "white",
-                        }}></EmailIcon>
+                        }}></EmailIcon> */}
                     <Button
                         variant="contained"
                         color="secondary"

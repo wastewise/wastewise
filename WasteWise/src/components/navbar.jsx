@@ -12,7 +12,6 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -20,7 +19,7 @@ import { links } from "../data/links";
 
 import logo from "/logo.png";
 
-const pages = ["Product", "AI", "Support"];
+const pages = ["Product", "AI"];
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -148,12 +147,12 @@ const Navbar = () => {
                                         ml: 2,
                                         cursor: "pointer",
                                     }}></FacebookIcon>
-                                <EmailIcon
+                                {/* <EmailIcon
                                     onClick={() => handleButtonClick(links[2])}
                                     sx={{
                                         ml: 2,
                                         cursor: "pointer",
-                                    }}></EmailIcon>
+                                    }}></EmailIcon> */}
                                 <Button
                                     variant="contained"
                                     color="secondary"
