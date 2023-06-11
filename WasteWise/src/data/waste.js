@@ -27,6 +27,14 @@ const Waste = [
         type: "Organic",
         color: "#cb3b22",
     },
+    {
+        type: "Textile",
+        color: "#9a7b4f",
+    },
+    {
+        type: "Wood",
+        color: "#9a7b4f",
+    },
 ];
 
 export default Waste;

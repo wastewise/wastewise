@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 
 import CameraswitchIcon from "@mui/icons-material/Cameraswitch";
@@ -9,10 +10,44 @@ import Navbar from "../components/navbar";
 
 import Waste from "../data/waste";
 
-const AI = () => {
-    var trashType = 0;
+const URL = "http://localhost:5000/api/ai";
 
+const AI = () => {
+    const webcamRef = useRef(null);
     const [cameraFacing, setCameraFacing] = useState("environment");
+    const [trashType, setTrashType] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const screenshot = webcamRef.current.getScreenshot();
+            // console.log(screenshot);
+            axios
+                .post(URL, { image: screenshot })
+                .then((response) => {
+                    console.log("Image uploaded successfully");
+                    console.log(response.data);
+                })
+                .catch((error) => {
+                    console.error("Error uploading image:", error);
+                });
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
+    useEffect(() => {
+        axios
+            .get(URL)
+            .then((response) => {
+                const parsedInt = parseInt(response.data);
+                setTrashType(parsedInt);
+            })
+            .catch((error) => {
+                console.error("Error retrieving integer:", error);
+            });
+    }, []);
 
     return (
         <>
@@ -32,6 +67,7 @@ const AI = () => {
                         width="90%"
                         height="auto"
                         audio={false}
+                        ref={webcamRef}
                         videoConstraints={{
                             facingMode: cameraFacing,
                         }}

@@ -156,7 +156,7 @@ const Navbar = () => {
                                 <Button
                                     variant="contained"
                                     color="secondary"
-                                    onClick={() => handleButtonClick(links[3])}
+                                    onClick={() => handleButtonClick(links[2])}
                                     sx={{
                                         marginLeft: "1rem",
                                         borderRadius: "20px",
@@ -169,7 +169,7 @@ const Navbar = () => {
                                             fontFamily: "monospace",
                                             letterSpacing: ".1rem",
                                         }}>
-                                        CONCTACT
+                                        CONTACT
                                     </Typography>
                                 </Button>
                             </Box>

@@ -12,6 +12,8 @@ import front from "/front.png";
 import middle from "/middle.png";
 import product from "/product.png";
 
+import { caseText, mainText, structureText, systemText } from "../data/text";
+
 const Product = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -135,14 +137,7 @@ const Product = () => {
                                             sx={{
                                                 textDecoration: "none",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.
+                                            {mainText}
                                         </Typography>
                                     </Box>
 
@@ -230,14 +225,7 @@ const Product = () => {
                                                 textDecoration: "none",
                                                 textAlign: "center",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.
+                                            {mainText}
                                         </Typography>
                                     </Box>
 
@@ -347,14 +335,7 @@ const Product = () => {
                                             sx={{
                                                 textDecoration: "none",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {caseText}
                                         </Typography>
                                     </Box>
                                 </Box>
@@ -387,14 +368,7 @@ const Product = () => {
                                                 textDecoration: "none",
                                                 textAlign: "center",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {caseText}
                                         </Typography>
                                     </Box>
                                 </Box>
@@ -496,14 +470,7 @@ const Product = () => {
                                             sx={{
                                                 textDecoration: "none",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {structureText}
                                         </Typography>
                                     </Box>
                                 </Box>
@@ -536,14 +503,7 @@ const Product = () => {
                                                 textDecoration: "none",
                                                 textAlign: "center",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {structureText}
                                         </Typography>
                                     </Box>
                                 </Box>
@@ -619,14 +579,7 @@ const Product = () => {
                                             sx={{
                                                 textDecoration: "none",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {systemText}
                                         </Typography>
                                     </Box>
                                 </Box>
@@ -659,14 +612,7 @@ const Product = () => {
                                                 textDecoration: "none",
                                                 textAlign: "center",
                                             }}>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book.{" "}
+                                            {systemText}
                                         </Typography>
                                     </Box>
                                 </Box>

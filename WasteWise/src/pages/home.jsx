@@ -5,6 +5,8 @@ import Navbar from "../components/navbar";
 
 import product from "/product.png";
 
+import { mainText } from "../data/text";
+
 const Home = () => {
     return (
         <>
@@ -47,147 +49,136 @@ const Home = () => {
                     </Box>
                 </Box>
 
-                <Grid
-                    container
-                    sx={{ height: "100%" }}
+                <Box
+                    width="100%"
                     bgcolor="primary.main"
-                    color="white">
-                    <Grid
-                        item
-                        xs={12}
-                        lg={6}
-                        p={4}
-                        sx={{
-                            paddingLeft: { xs: 4, sm: 8, md: 16, lg: 8 },
-                            paddingRight: { xs: 4, sm: 8, md: 16, lg: 8 },
-                        }}>
-                        <Box
-                            component="img"
-                            alt="product"
-                            src={product}
-                            sx={{
-                                borderRadius: "40px",
-                                height: "100%",
-                                width: "100%",
-                            }}
-                        />
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        lg={6}
-                        px={8}
-                        py={4}
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center">
-                        <Box
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            sx={{
-                                display: {
-                                    xs: "none",
-                                    sm: "none",
-                                    md: "none",
-                                    lg: "flex",
-                                },
-                            }}>
-                            <Box width="100%">
-                                <Typography
-                                    variant="h3"
-                                    sx={{
-                                        fontWeight: 900,
-                                        letterSpacing: ".1rem",
-                                    }}>
-                                    WASTEBIN
-                                </Typography>
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    py={4}>
+                    <Box sx={{ width: { md: "100%", lg: "80%" } }}>
+                        <Grid container sx={{ height: "100%" }} color="white">
+                            <Grid
+                                item
+                                xs={12}
+                                lg={6}
+                                p={4}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                sx={{
+                                    paddingLeft: {
+                                        xs: 4,
+                                        sm: 8,
+                                        md: 16,
+                                        lg: 8,
+                                    },
+                                    paddingRight: {
+                                        xs: 4,
+                                        sm: 8,
+                                        md: 16,
+                                        lg: 8,
+                                    },
+                                }}>
                                 <Box
-                                    bgcolor="white"
-                                    my={4}
-                                    sx={{ height: "2px", width: "70%" }}
-                                />
-                                <Box width="100%">
-                                    <Typography
-                                        variant="body1"
-                                        sx={{
-                                            textDecoration: "none",
-                                        }}>
-                                        Lorem Ipsum is simply dummy text of the
-                                        printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard
-                                        dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type
-                                        and scrambled it to make a type specimen
-                                        book. It has survived not only five
-                                        centuries, but also the leap into
-                                        electronic typesetting, remaining
-                                        essentially unchanged. It was
-                                        popularised in the 1960s with the
-                                        release of Letraset sheets containing
-                                        Lorem Ipsum passages, and more recently
-                                        with desktop publishing software like
-                                        Aldus PageMaker including versions of
-                                        Lorem Ipsum.
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Box>
-                        <Box
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            sx={{
-                                display: {
-                                    md: "flex",
-                                    lg: "none",
-                                },
-                            }}>
-                            <Box width="100%">
-                                <Typography
-                                    variant="h3"
+                                    component="img"
+                                    alt="product"
+                                    src={product}
                                     sx={{
-                                        fontWeight: 900,
-                                        letterSpacing: ".1rem",
-                                        textAlign: "center",
-                                    }}>
-                                    WASTEBIN
-                                </Typography>
-                                <Box
-                                    bgcolor="white"
-                                    mx="auto"
-                                    my={4}
-                                    sx={{ height: "2px", width: "70%" }}
+                                        borderRadius: "40px",
+                                        height: "auto",
+                                        width: "100%",
+                                    }}
                                 />
-                                <Box width="100%">
-                                    <Typography
-                                        variant="body1"
-                                        sx={{
-                                            textDecoration: "none",
-                                            textAlign: "center",
-                                        }}>
-                                        Lorem Ipsum is simply dummy text of the
-                                        printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard
-                                        dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type
-                                        and scrambled it to make a type specimen
-                                        book. It has survived not only five
-                                        centuries, but also the leap into
-                                        electronic typesetting, remaining
-                                        essentially unchanged. It was
-                                        popularised in the 1960s with the
-                                        release of Letraset sheets containing
-                                        Lorem Ipsum passages, and more recently
-                                        with desktop publishing software like
-                                        Aldus PageMaker including versions of
-                                        Lorem Ipsum.
-                                    </Typography>
+                            </Grid>
+                            <Grid
+                                item
+                                xs={12}
+                                lg={6}
+                                px={8}
+                                py={4}
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center">
+                                <Box
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    sx={{
+                                        display: {
+                                            xs: "none",
+                                            sm: "none",
+                                            md: "none",
+                                            lg: "flex",
+                                        },
+                                    }}>
+                                    <Box width="100%">
+                                        <Typography
+                                            variant="h3"
+                                            sx={{
+                                                fontWeight: 900,
+                                                letterSpacing: ".1rem",
+                                            }}>
+                                            WASTEBIN
+                                        </Typography>
+                                        <Box
+                                            bgcolor="white"
+                                            my={4}
+                                            sx={{ height: "2px", width: "70%" }}
+                                        />
+                                        <Box width="100%">
+                                            <Typography
+                                                variant="body1"
+                                                sx={{
+                                                    textDecoration: "none",
+                                                }}>
+                                                {mainText}
+                                            </Typography>
+                                        </Box>
+                                    </Box>
                                 </Box>
-                            </Box>
-                        </Box>
-                    </Grid>
-                </Grid>
+                                <Box
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    sx={{
+                                        display: {
+                                            md: "flex",
+                                            lg: "none",
+                                        },
+                                    }}>
+                                    <Box width="100%">
+                                        <Typography
+                                            variant="h3"
+                                            sx={{
+                                                fontWeight: 900,
+                                                letterSpacing: ".1rem",
+                                                textAlign: "center",
+                                            }}>
+                                            WASTEBIN
+                                        </Typography>
+                                        <Box
+                                            bgcolor="white"
+                                            mx="auto"
+                                            my={4}
+                                            sx={{ height: "2px", width: "70%" }}
+                                        />
+                                        <Box width="100%">
+                                            <Typography
+                                                variant="body1"
+                                                sx={{
+                                                    textDecoration: "none",
+                                                    textAlign: "center",
+                                                }}>
+                                                {mainText}
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Box>
 
                 <Box
                     py={8}
