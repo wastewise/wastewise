@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 import AI from "./pages/ai";
 import Home from "./pages/home";
@@ -23,7 +23,7 @@ const theme = createTheme({
 const App = () => {
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter>
+            <HashRouter basename="/">
                 <Routes>
                     <Route path="*" element={<Home />} />
                     <Route path="/" element={<Home />} />
@@ -31,7 +31,7 @@ const App = () => {
                     <Route path="/wastewise/ai demo" element={<AI />} />
                     <Route path="/wastewise/produs" element={<Product />} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </ThemeProvider>
     );
 };
