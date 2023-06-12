@@ -7,10 +7,10 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 import Model from "./model";
-import back from "/back.png";
-import front from "/front.png";
-import middle from "/middle.png";
-import product from "/product.png";
+// import back from "/wastewise/back.png";
+// import front from "/wastewise/front.png";
+// import middle from "/wastewise/middle.png";
+// import product from "/wastewise/product.png";
 
 import { caseText, productText, structureText, systemText } from "../data/text";
 
@@ -87,7 +87,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="product"
-                                src={product}
+                                src={"/wastewise/product.png"}
                                 sx={{
                                     borderRadius: "40px",
                                     height: "auto",
@@ -389,7 +389,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="front"
-                                src={front}
+                                src={"/wastewise/front.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -426,7 +426,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="back"
-                                src={back}
+                                src={"/wastewise/back.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -528,7 +528,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="back"
-                                src={back}
+                                src={"/wastewise/back.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -633,7 +633,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="middle"
-                                src={middle}
+                                src={"/wastewise/middle.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",

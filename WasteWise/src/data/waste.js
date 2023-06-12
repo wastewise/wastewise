@@ -8,11 +8,12 @@ const Waste = [
         color: "#eaca33",
     },
     {
-        type: "Hârtie",
+        type: "Carton",
         color: "#5a6bb9",
     },
     {
-        type: "Sticlă",
+        // type: "Sticlă",
+        type: "Plastic",
         color: "#53862c",
     },
     {
@@ -20,12 +21,11 @@ const Waste = [
         color: "#cb3b22",
     },
     {
-        // type: "Plastic",
         type: "Plastic",
         color: "#de8526",
     },
     {
-        type: "Hârtie",
+        type: "Hârtie sau carton",
         color: "#5a6bb9",
     },
     {

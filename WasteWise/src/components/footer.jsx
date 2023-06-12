@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import { links } from "../data/links";
 
-import logo from "/logo.png";
+// import logo from "/wastewise/logo.png";
 
 const Footer = (props) => {
     const handleButtonClick = (pageURL) => {
@@ -25,7 +25,7 @@ const Footer = (props) => {
                     <Box
                         component="img"
                         alt="logo"
-                        src={logo}
+                        src={"/wastewise/logo.png"}
                         color="white"
                         sx={{
                             height: "45px",

@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
-import product from "/product.png";
+// import product from "/wastewise/product.png";
 
 import { mainText, clientsText } from "../data/text";
 
@@ -83,7 +83,7 @@ const Home = () => {
                                 <Box
                                     component="img"
                                     alt="product"
-                                    src={product}
+                                    src={"/wastewise/product.png"}
                                     sx={{
                                         borderRadius: "40px",
                                         height: "auto",
