@@ -232,11 +232,11 @@ const Product = () => {
                                     <Grid container width="100%">
                                         <Grid
                                             item
-                                            xs={7}
+                                            xs={6}
                                             display="flex"
                                             alignItems="center"
                                             justifyContent="center"
-                                            ml={-2}>
+                                            ml={-3}>
                                             <Box
                                                 bgcolor="secondary.main"
                                                 width="160px"
@@ -246,7 +246,7 @@ const Product = () => {
                                                 alignItems="center"
                                                 justifyContent="center">
                                                 <Typography
-                                                    variant="h6"
+                                                    variant="body1"
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
@@ -256,22 +256,22 @@ const Product = () => {
                                         </Grid>
                                         <Grid
                                             item
-                                            xs={5}
+                                            xs={6}
                                             display="flex"
                                             alignItems="center"
                                             justifyContent="center"
-                                            ml={2}>
+                                            ml={3}>
                                             <Button
                                                 variant="contained"
                                                 color="secondary"
                                                 onClick={handleOpen}
                                                 sx={{
                                                     borderRadius: "40px",
-                                                    width: "160px",
+                                                    width: "180px",
                                                     height: "40px",
                                                 }}>
                                                 <Typography
-                                                    variant="h6"
+                                                    variant="body1"
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>

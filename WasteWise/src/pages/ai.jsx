@@ -10,7 +10,7 @@ import Navbar from "../components/navbar";
 
 import Waste from "../data/waste";
 
-const URL = "http://127.0.0.1:5000/predict";
+const URL = "http://192.168.29.9:5000/predict";
 
 const computeResponse = (data, setTrashType) => {
     // 'Aluminium', 'Carton', 'Glass', 'Organic Waste', 'Other Plastics', 'Paper and Cardboard', 'Plastic', 'Textiles', 'Wood'
@@ -31,7 +31,7 @@ const AI = () => {
     const webcamRef = useRef(null);
     const [cameraFacing, setCameraFacing] = useState("environment");
     const [trashType, setTrashType] = useState(0);
-    const [checked, setChecked] = useState(true);
+    const [checked, setChecked] = useState(false);
 
     const handleChange = (event) => {
         setChecked(event.target.checked);
@@ -145,8 +145,8 @@ const AI = () => {
                             left="45%"
                             display={checked === true ? "block" : "none"}>
                             <Box 
-                                width="85px" 
-                                height="85px" 
+                                width="75px" 
+                                height="75px" 
                                 border="1px solid white" 
                                 borderRadius="50%"
                                 display="flex"
@@ -159,7 +159,7 @@ const AI = () => {
                                     sx={{
                                         borderRadius: "50%", 
                                         position: "absolute", 
-                                        width: "40px", 
+                                        width: "20px", 
                                         height: "63px"}} 
                                 />
                             </Box>
