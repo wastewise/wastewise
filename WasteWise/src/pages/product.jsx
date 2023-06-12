@@ -12,7 +12,7 @@ import front from "/front.png";
 import middle from "/middle.png";
 import product from "/product.png";
 
-import { caseText, mainText, structureText, systemText } from "../data/text";
+import { caseText, productText, structureText, systemText } from "../data/text";
 
 const Product = () => {
     const [open, setOpen] = useState(false);
@@ -137,7 +137,7 @@ const Product = () => {
                                             sx={{
                                                 textDecoration: "none",
                                             }}>
-                                            {mainText}
+                                            {productText}
                                         </Typography>
                                     </Box>
 
@@ -160,7 +160,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    Price: $1500
+                                                    Price: €2530
                                                 </Typography>
                                             </Box>
                                         </Grid>
@@ -225,7 +225,7 @@ const Product = () => {
                                                 textDecoration: "none",
                                                 textAlign: "center",
                                             }}>
-                                            {mainText}
+                                            {productText}
                                         </Typography>
                                     </Box>
 
@@ -250,7 +250,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    Price: $1500
+                                                    Price: €2530
                                                 </Typography>
                                             </Box>
                                         </Grid>
@@ -327,7 +327,7 @@ const Product = () => {
                                             letterSpacing: ".1rem",
                                         }}
                                         pb={2}>
-                                        Case
+                                        Carcasa
                                     </Typography>
                                     <Box width="100%">
                                         <Typography
@@ -359,7 +359,7 @@ const Product = () => {
                                             textAlign: "center",
                                         }}
                                         pb={2}>
-                                        Case
+                                        Carcasa
                                     </Typography>
                                     <Box width="100%">
                                         <Typography

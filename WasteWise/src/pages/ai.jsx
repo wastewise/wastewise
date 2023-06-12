@@ -12,6 +12,21 @@ import Waste from "../data/waste";
 
 const URL = "http://127.0.0.1:5000/predict";
 
+const computeResponse = (data, setTrashType) => {
+    // 'Aluminium', 'Carton', 'Glass', 'Organic Waste', 'Other Plastics', 'Paper and Cardboard', 'Plastic', 'Textiles', 'Wood'
+    let max = -1, index = 0;
+    for (let i = 0; i < data.length; i++)
+        if (data[i] > max && data[i] > 0.5) {
+            max = data[i];
+            index = i;
+        }
+
+    if (max === -1)
+        setTrashType(0);
+    else
+        setTrashType(index + 1);
+}
+
 const AI = () => {
     const webcamRef = useRef(null);
     const [cameraFacing, setCameraFacing] = useState("environment");
@@ -27,6 +42,7 @@ const AI = () => {
                 .then((response) => {
                     console.log("Image uploaded successfully");
                     console.log(response.data);
+                    computeResponse(response.data[0], setTrashType);
                 })
                 .catch((error) => {
                     console.error("Error uploading image:", error);
@@ -36,18 +52,6 @@ const AI = () => {
         return () => {
             clearInterval(interval);
         };
-    }, []);
-
-    useEffect(() => {
-        axios
-            .get(URL)
-            .then((response) => {
-                const parsedInt = parseInt(response.data);
-                setTrashType(parsedInt);
-            })
-            .catch((error) => {
-                console.error("Error retrieving integer:", error);
-            });
     }, []);
 
     return (
