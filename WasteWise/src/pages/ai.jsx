@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Switch, Typography, Button } from "@mui/material";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
@@ -31,9 +31,15 @@ const AI = () => {
     const webcamRef = useRef(null);
     const [cameraFacing, setCameraFacing] = useState("environment");
     const [trashType, setTrashType] = useState(0);
+    const [checked, setChecked] = useState(true);
+
+    const handleChange = (event) => {
+        setChecked(event.target.checked);
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
+            if (checked === false) {
             const screenshot = webcamRef.current.getScreenshot();
             if (screenshot === null)
                 return;
@@ -47,6 +53,7 @@ const AI = () => {
                 .catch((error) => {
                     console.error("Error uploading image:", error);
                 });
+            }
         }, 1000);
 
         return () => {
@@ -54,13 +61,31 @@ const AI = () => {
         };
     }, []);
 
+    const sendImage = () => {
+        const screenshot = webcamRef.current.getScreenshot();
+
+        if (screenshot === null)
+            return;
+
+        axios
+            .post(URL, {image: screenshot.split(",")[1]})
+            .then((response) => {
+                console.log("Image uploaded successfully");
+                console.log(response.data);
+                computeResponse(response.data[0], setTrashType);
+            })
+            .catch((error) => {
+                console.error("Error uploading image:", error);
+            });
+    }
+
     return (
         <>
             <Navbar />
 
             <Box bgcolor="primary.dark" sx={{ height: "100%" }}>
                 <Typography variant="h4" align="center" color="white" p={4}>
-                    AI Model for Waste Detecting
+                    Model AI pentru detectarea deșeurilor
                 </Typography>
                 <Box
                     display="flex"
@@ -101,6 +126,44 @@ const AI = () => {
                                 else setCameraFacing("environment");
                             }}
                         />
+                        <Switch
+                            size="medium"
+                            color="secondary" 
+                            onChange={handleChange}
+                            checked={checked}
+                            inputProps={{ 'aria-label': 'controlled' }}
+                            sx={{
+                                cursor: "pointer",
+                                position: "absolute",
+                                left: "2%",
+                                top: "2%",
+                            }}
+                        />
+                        <Box 
+                            position="absolute" 
+                            bottom="5%"
+                            left="45%"
+                            display={checked === true ? "block" : "none"}>
+                            <Box 
+                                width="85px" 
+                                height="85px" 
+                                border="1px solid white" 
+                                borderRadius="50%"
+                                display="flex"
+                                justifyContent="center"
+                                alignItems="center">
+                                <Button 
+                                    onClick={() => {sendImage()}}
+                                    variant="contained" 
+                                    color="secondary" 
+                                    sx={{
+                                        borderRadius: "50%", 
+                                        position: "absolute", 
+                                        width: "40px", 
+                                        height: "63px"}} 
+                                />
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
                 <Box display="flex" justifyContent="center">
@@ -109,7 +172,7 @@ const AI = () => {
                         align="center"
                         color="white"
                         pt={4}>
-                        Detected Waste:
+                        Deșeu detectat:
                     </Typography>
                     <Typography
                         variant="h5"
@@ -121,8 +184,8 @@ const AI = () => {
                     </Typography>
                 </Box>
                 <Typography variant="h6" align="center" color="white" p={4}>
-                    This is a demo of our AI model for detecting waste. It is
-                    currently in development and will be available soon.
+                    Aceasta este o demonstrație a modelului nostru de AI pentru detectarea deșeurilor. Este
+                    în prezent în dezvoltare și va fi disponibil în curând.
                 </Typography>
             </Box>
 

@@ -160,7 +160,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    Price: €2530
+                                                    Preț: 2350€
                                                 </Typography>
                                             </Box>
                                         </Grid>
@@ -185,7 +185,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    3D View
+                                                    Randare 3D
                                                 </Typography>
                                             </Button>
                                         </Grid>
@@ -250,7 +250,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    Price: €2530
+                                                    Preț: 2350€
                                                 </Typography>
                                             </Box>
                                         </Grid>
@@ -275,7 +275,7 @@ const Product = () => {
                                                     sx={{
                                                         textDecoration: "none",
                                                     }}>
-                                                    3D View
+                                                    Randare 3D
                                                 </Typography>
                                             </Button>
                                         </Grid>

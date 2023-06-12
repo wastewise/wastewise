@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 
 import product from "/product.png";
 
-import { mainText } from "../data/text";
+import { mainText, clientsText } from "../data/text";
 
 const Home = () => {
     return (
@@ -119,7 +119,7 @@ const Home = () => {
                                                 fontWeight: 900,
                                                 letterSpacing: ".1rem",
                                             }}>
-                                            WASTEBIN
+                                            WASTEWISE
                                         </Typography>
                                         <Box
                                             bgcolor="white"
@@ -180,7 +180,7 @@ const Home = () => {
                     </Box>
                 </Box>
 
-                <Box
+                {/* <Box
                     py={8}
                     bgcolor={"primary.dark"}
                     color="white"
@@ -196,20 +196,17 @@ const Home = () => {
                                 letterSpacing: ".1rem",
                                 textAlign: "center",
                             }}>
-                            Our Possible Clients
+                            Clienți posibili
                         </Typography>
                         <Typography
                             variant="body1"
                             sx={{ textAlign: "center" }}>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and
+                            {clientsText}
                         </Typography>
                     </Box>
-                </Box>
+                </Box> */}
 
-                <Footer bgcolor="primary.main" />
+                <Footer bgcolor="primary.dark" />
             </Box>
         </>
     );

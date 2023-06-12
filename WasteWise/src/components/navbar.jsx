@@ -19,7 +19,7 @@ import { links } from "../data/links";
 
 import logo from "/logo.png";
 
-const pages = ["Product", "AI"];
+const pages = ["Produs", "AI Demo"];
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -169,7 +169,7 @@ const Navbar = () => {
                                             fontFamily: "monospace",
                                             letterSpacing: ".1rem",
                                         }}>
-                                        CONTACT
+                                        Contactați
                                     </Typography>
                                 </Button>
                             </Box>

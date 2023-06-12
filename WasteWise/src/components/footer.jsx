@@ -99,7 +99,7 @@ const Footer = (props) => {
                                 fontFamily: "monospace",
                                 letterSpacing: ".1rem",
                             }}>
-                            CONCTACT
+                            Contactați
                         </Typography>
                     </Button>
                 </Box>
@@ -109,7 +109,7 @@ const Footer = (props) => {
                         mt={2}
                         px={2}
                         sx={{ textAlign: "center", letterSpacing: "-0.05rem" }}>
-                        2023 WasteWise, Brasov, Romania. Made with ❤️ by CNI
+                        2023 WasteWise, Brașov, România. Făcut cu ❤️ de CNI
                         "Grigore Moisil"
                     </Typography>
                 </Box>

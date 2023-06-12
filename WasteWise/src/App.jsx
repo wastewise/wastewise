@@ -25,10 +25,11 @@ const App = () => {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Routes>
+                    <Route path="*" element={<Home />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/wastewise" element={<Home />} />
-                    <Route path="/wastewise/ai" element={<AI />} />
-                    <Route path="/wastewise/product" element={<Product />} />
+                    <Route path="/wastewise/ai demo" element={<AI />} />
+                    <Route path="/wastewise/produs" element={<Product />} />
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>

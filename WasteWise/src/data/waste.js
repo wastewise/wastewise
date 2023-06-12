@@ -1,6 +1,6 @@
 const Waste = [
     {
-        type: "None",
+        type: "Nimic",
         color: "white",
     },
     {
@@ -8,23 +8,24 @@ const Waste = [
         color: "#eaca33",
     },
     {
-        type: "Paper",
+        type: "Hârtie",
         color: "#5a6bb9",
     },
     {
-        type: "Glass",
+        type: "Sticlă",
         color: "#53862c",
     },
     {
-        type: "Organic",
+        type: "Deșeu Organic",
         color: "#cb3b22",
     },
     {
+        // type: "Plastic",
         type: "Plastic",
         color: "#de8526",
     },
     {
-        type: "Paper",
+        type: "Hârtie",
         color: "#5a6bb9",
     },
     {
@@ -32,11 +33,11 @@ const Waste = [
         color: "#de8526",
     },
     {
-        type: "Textile",
+        type: "Material Textil",
         color: "#9a7b4f",
     },
     {
-        type: "Wood",
+        type: "Lemn",
         color: "#9a7b4f",
     },
 ];
