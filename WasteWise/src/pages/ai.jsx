@@ -10,7 +10,7 @@ import Navbar from "../components/navbar";
 
 import Waste from "../data/waste";
 
-const URL = "http://localhost:5000/api/ai";
+const URL = "http://127.0.0.1:5000/predict";
 
 const AI = () => {
     const webcamRef = useRef(null);
@@ -20,9 +20,10 @@ const AI = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             const screenshot = webcamRef.current.getScreenshot();
-            // console.log(screenshot);
+            if (screenshot === null)
+                return;
             axios
-                .post(URL, { image: screenshot })
+                .post(URL, {image: screenshot.split(",")[1]})
                 .then((response) => {
                     console.log("Image uploaded successfully");
                     console.log(response.data);
@@ -67,6 +68,7 @@ const AI = () => {
                         width="90%"
                         height="auto"
                         audio={false}
+                        screenshotFormat="image/jpeg"
                         ref={webcamRef}
                         videoConstraints={{
                             facingMode: cameraFacing,
