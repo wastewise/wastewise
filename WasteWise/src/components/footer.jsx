@@ -25,7 +25,7 @@ const Footer = (props) => {
                     <Box
                         component="img"
                         alt="logo"
-                        src={"/wastewise/logo.png"}
+                        src={"/logo.png"}
                         color="white"
                         sx={{
                             height: "45px",

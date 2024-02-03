@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 
 // import product from "/wastewise/product.png";
 
-import { mainText, clientsText } from "../data/text";
+import { mainText } from "../data/text";
 
 const Home = () => {
     return (
@@ -83,7 +83,7 @@ const Home = () => {
                                 <Box
                                     component="img"
                                     alt="product"
-                                    src={"/wastewise/product.png"}
+                                    src={"/product.png"}
                                     sx={{
                                         borderRadius: "40px",
                                         height: "auto",

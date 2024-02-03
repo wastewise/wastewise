@@ -53,7 +53,7 @@ const Navbar = () => {
                                 <Box
                                     component="img"
                                     alt="logo"
-                                    src={"/wastewise/logo.png"}
+                                    src={"/logo.png"}
                                     color="white"
                                     sx={{
                                         height: "35px",

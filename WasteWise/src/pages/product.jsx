@@ -87,7 +87,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="product"
-                                src={"/wastewise/product.png"}
+                                src={"/product.png"}
                                 sx={{
                                     borderRadius: "40px",
                                     height: "auto",
@@ -389,7 +389,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="front"
-                                src={"/wastewise/front.png"}
+                                src={"/front.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -426,7 +426,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="back"
-                                src={"/wastewise/back.png"}
+                                src={"/back.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -528,7 +528,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="back"
-                                src={"/wastewise/back.png"}
+                                src={"/back.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
@@ -633,7 +633,7 @@ const Product = () => {
                             <Box
                                 component="img"
                                 alt="middle"
-                                src={"/wastewise/middle.png"}
+                                src={"/middle.png"}
                                 sx={{
                                     height: "100%",
                                     width: "100%",
